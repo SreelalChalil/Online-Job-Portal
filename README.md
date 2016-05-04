@@ -1,8 +1,8 @@
 # Online-Job-Portal
 Online Job Portal project is web application built using PHP, MySql as backend and HTML JavaScript &amp; Bootstrap as Frontend. 
 
-****** This is developed as a Mini Project for partial requirement of B.Tech Degree in Computer Science ******
-                 ********** Sreelal C, KMCT College Of Engineering *********** 
+<p color="orange">This is developed as a Mini Project for partial requirement of B.Tech Degree in Computer Science.</br>
+                Sreelal C, KMCT College Of Engineering</p>
  
  <h2>Introduction</h2>
  
