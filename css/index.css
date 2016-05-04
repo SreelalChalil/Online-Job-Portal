@@ -1,0 +1,43 @@
+#searchjum{
+    background-color: #cdddeb; /* Orange */
+    color: #1b6d85;
+}
+#insidenav{
+    background: steelblue;
+    color: white;
+    font-size: 13px;
+}
+nav a{
+    font-size: 16px;
+    font-family: ubuntu;
+    color: white;
+}
+nav ul li {
+    font-size: 16px;
+    font-family: ubuntu;
+}
+li.active{
+    background: cadetblue;
+}
+#subcontent{
+    background: lavender;0
+color: black;
+    font-size: 13px;
+}
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+}
+div.bmsTop{
+    list-style-type: none;
+    display: block;
+    background:transparent;
+    padding: 10px 8px 8px;
+    margin-bottom: 10px;
+
+}
+div.bmsTop ul li{
+    display: inline;
+    overflow: hidden;
+}

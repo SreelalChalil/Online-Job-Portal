@@ -1,0 +1,44 @@
+
+ td{
+     padding: 12px;
+ }    
+body{
+    background-image: url("../images/hero-background-lg.jpg");
+    font-family: Ubuntu ;
+    font-weight: normal;
+    font-size: 16px;
+
+}
+table{
+  background:white;
+}
+label{
+  color: black;
+  font-family: consolas;
+}
+body{
+  font-family: ubuntu;
+}
+h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 30px;
+}
+
+label.error{
+    color: crimson;
+    font-size: 16px;
+}
+h3.h3style{
+  color: blue;
+  font-family: ubuntu;
+}
+body.indexbody{
+    background: lawngreen;
+}
+#header{
+    padding: 10px;
+    margin: 10px;
+}
+
