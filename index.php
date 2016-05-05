@@ -117,7 +117,7 @@
                 </div>
                 <div class="panel-footer">
                     <h3>$0</h3>
-                    <button class="btn btn-lg"><a href="register_emp.php" style="color: inherit"> Sign Up</a></button>
+                   <a href="register_emp.php" style="color: inherit"> <button class="btn btn-lg">Sign Up</button></a>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="panel-footer">
                     <h3>$0</h3>
-                    <button class="btn btn-lg"><a href="register_user.php" style="color: inherit">Sign Up</a></button>
+                    <a href="register_user.php" style="color: inherit"><button class="btn btn-lg">Sign Up</button></a>
                 </div>
             </div>
         </div>
