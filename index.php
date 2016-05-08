@@ -46,7 +46,7 @@
       <li class="active"><a data-toggle="tab" href="#main1">Home</a></li>
         <li><a data-toggle="tab" href="#recent"">Recent Jobs</a></li>
       <li><a data-toggle="tab" href="#jobseeker">Job Seeker</a></li>
-      <li><a data-toggle="tab" href="#">Company</a></li>
+      <li><a data-toggle="tab" href="#">Employer</a></li>
       <li><a data-toggle="tab" href="#contact">Contact Us</a></li>
     </ul>
 
@@ -56,7 +56,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="register_user.php">Jobseeker</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="register_emp.php">Company</a></li>
+                        <li><a href="register_emp.php">Employer</a></li>
                     </ul>
                 </li>
                 <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -117,7 +117,7 @@
                 </div>
                 <div class="panel-footer">
                     <h3>$0</h3>
-                    <button class="btn btn-lg"><a href="register_emp.php" style="color: inherit"> Sign Up</a></button>
+                   <a href="register_emp.php" style="color: inherit"> <button class="btn btn-lg">Sign Up</button></a>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="panel-footer">
                     <h3>$0</h3>
-                    <button class="btn btn-lg"><a href="register_user.php" style="color: inherit">Sign Up</a></button>
+                    <a href="register_user.php" style="color: inherit"><button class="btn btn-lg">Sign Up</button></a>
                 </div>
             </div>
         </div>
@@ -225,7 +225,6 @@
     <p>Job Portal</p>
 </footer>
 </body>
-
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/search.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -19,5 +19,5 @@ address, representative name, contact phone/mail etc. Later on after login he ca
 update jobs, remove a job, manage job applicants and shortlist the applicants using an optional online test. 
 Our proposed system is developed using PHP with MySQL as backend and HTML, Bootstrap, AJAX, JavaScript 
 technologies as front end. The system is web based so that the user can easily login to it, only requirement 
-is an internet connection.    
+is an internet connection.
     
