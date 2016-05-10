@@ -23,7 +23,7 @@ is an internet connection.
     
 <h2> Liscense </h2>
 Online-Job-Portal - A web application built on PHP HTML & javascript
-    Copyright (C) 2016  @Sreelal-C
+    Copyright (C) 2016  Sreelal-C
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
