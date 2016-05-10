@@ -22,8 +22,8 @@ technologies as front end. The system is web based so that the user can easily l
 is an internet connection.
     
 <h2> Liscense </h2>
-Online-Job-Portal - A web application built on PHP HTML & javascript
-    Copyright (C) 2016  Sreelal-C
+Online-Job-Portal - A web application built on PHP HTML & javascript</br>
+Copyright (C) 2016  Sreelal C
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
