@@ -63,7 +63,7 @@ $q1=mysqli_query($db1,"select * from application WHERE user_id=$jsid");
 <table class="table table-responsive" style="margin-top: 30px;">
         <th>Employer</th>
         <th>Job Title</th>
-        <th style="width: 70px">Job Description</th>
+        <th>Job Description</th>
         <th>Date of Posting</th>
         <th>Date on Applied</th>
         <th colspan="3">Actions</th>
@@ -80,7 +80,7 @@ $q1=mysqli_query($db1,"select * from application WHERE user_id=$jsid");
                 echo "<td>" . substr($result['jobdesc'],0,120) ." .......</td>";
                 echo "<td>" . $result['postdate'] . "</td>";
                 echo "<td>" . $row['date_applied']."</td>";
-                echo "<td> <button type='button' class='btn btn-success'> <a style='color: whitesmoke;'  href='view_jobs.php?jid=" . $result['jobid'] . "'>View Job</a></button> </td>";
+                echo "<td>  <a style='color: whitesmoke;'  href='view_jobs.php?jid=" . $result['jobid'] . "'><button type='button' class='btn btn-success'>View Job</button> </a></td>";
                 echo "</tr>";
             }
         }

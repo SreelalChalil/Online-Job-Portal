@@ -78,7 +78,7 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_GET[eid]");
             echo "<td>".$result['title']."</td>";
             echo "<td>".substr($result['jobdesc'],0,120)." ........</td>";
             echo "<td>".$result['postdate']."</td>";
-            echo "<td> <button type='button' class='btn btn-success'> <a style='color: whitesmoke;'  href='view_jobs.php?jid=".$result['jobid']."'>View Job</a></button> </td>";
+            echo "<td> <a style='color: whitesmoke;'  href='view_jobs.php?jid=".$result['jobid']."'> <button type='button' class='btn btn-success'>View Job</button></a> </td>";
             echo "</tr>";
         }
         ?>
