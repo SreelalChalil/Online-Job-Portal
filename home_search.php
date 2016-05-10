@@ -51,7 +51,7 @@ else {
 
         echo "</tr>";
     }
-    echo "<h4>Login to view more</h4>";
+    echo "<h4> <a href='login.php'>Login to view more</a> </h4>";
     }
 
     }     ?>

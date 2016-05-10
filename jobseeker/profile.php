@@ -115,7 +115,7 @@ else
         </div>
             <strong><?php echo $row['name']; ?> </strong>
             <!-- Button trigger modal -->
-          <p> <button type="button" class="btn btn-default" ><a href="chane_image.php">Change Image</a> </button>
+          <p> <a href="chane_image.php"><button type="button" class="btn btn-default" >Change Image </button></a>
         <!-- profile pic --->
 </aside>
     <!------------------------------------------------------------------------------- -->
@@ -192,7 +192,7 @@ else
                 echo "<td>" . $result2['title'] . "</td>";
                 echo "<td>" . substr($result2['jobdesc'],0,120) . " ......</td>";
                 echo "<td width='20px'>" . $result2['postdate'] . "</td>";
-                echo "<td> <button type='button' class='btn btn-success'> <a style='color: whitesmoke;'  href='view_jobs.php?jid=" . $result2['jobid'] . "'>View Job</a> </button> </td>";
+                echo "<td> <a style='color: whitesmoke;'  href='view_jobs.php?jid=" . $result2['jobid'] . "'> <button type='button' class='btn btn-success'>View Job</button></a>  </td>";
                 echo "</tr>";
             }
         }
