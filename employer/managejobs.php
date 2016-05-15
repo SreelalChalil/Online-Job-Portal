@@ -77,6 +77,7 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_SESSION[eid]");
 </div><!-- /.container-fluid -->
 <body>
 <h3 style="color: seagreen; margin-top: 50px; " class="text-center">Manage Your Posted Jobs</h3>
+<div class="page-header" style="background: #f4511e"></div>
 <?php if(mysqli_num_rows($query)>0) { ?>
 <div class="container" id="viewmain">
     <table class="table table-responsive">
@@ -94,8 +95,8 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_SESSION[eid]");
         echo "<td>".$result['title']."</td>";
         echo "<td>".substr($result['jobdesc'],0,130)." ..........</td>";
         echo "<td>".$result['postdate']."</td>";
-        echo "<td> <button type='button' class='btn btn-success'> <a style='color: whitesmoke;'  href='view.php?jid=".$result['jobid']."'>View Job</a></button> </td>";
-        echo "<td> <button type='button' class='btn btn-success'> <a style='color: whitesmoke;'  href='manage_applicants.php?jobid=".$result['jobid']."'>View Applicants</a></button> </td>";
+        echo "<td>  <a style='color: whitesmoke;'  href='view.php?jid=".$result['jobid']."'><button type='button' class='btn btn-success'>View Job</button></a> </td>";
+        echo "<td> <a style='color: whitesmoke;'  href='manage_applicants.php?jobid=".$result['jobid']."'><button type='button' class='btn btn-success'> View Applicants</button> </a></td>";
         echo "</tr>";
     }
 ?>
