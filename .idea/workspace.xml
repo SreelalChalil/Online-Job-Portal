@@ -22,20 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="register_emp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register_emp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="testfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
@@ -74,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jobseeker/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21348314">
+            <state vertical-scroll-proportion="-5.5416665">
               <caret line="81" column="55" selection-start-line="81" selection-start-column="55" selection-end-line="81" selection-end-column="55" />
               <folding>
                 <marker date="1463284505820" expanded="true" signature="960:1049" placeholder="select * fro..login..." />
@@ -90,6 +80,49 @@
                 <marker date="1463284505820" expanded="true" signature="9866:9934" placeholder="..." />
                 <marker date="1463284505820" expanded="true" signature="9872:9925" placeholder="..." />
                 <marker date="1463284505820" expanded="false" signature="9957:9972" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="managejobs.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/employer/managejobs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.61476725">
+              <caret line="98" column="151" selection-start-line="98" selection-start-column="151" selection-end-line="98" selection-end-column="151" />
+              <folding>
+                <marker date="1463286626716" expanded="true" signature="879:910" placeholder="select * fro..jobs..." />
+                <marker date="1463286626716" expanded="true" signature="4127:4145" placeholder="..." />
+                <marker date="1463286626716" expanded="true" signature="4294:4312" placeholder="..." />
+                <marker date="1463286626716" expanded="true" signature="4549:4892" placeholder="..." />
+                <marker date="1463286626716" expanded="true" signature="4614:4885" placeholder="..." />
+                <marker date="1463286626716" expanded="true" signature="4704:4772" placeholder="..." />
+                <marker date="1463286626716" expanded="true" signature="4710:4763" placeholder="..." />
+                <marker date="1463286626716" expanded="false" signature="4795:4810" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_applicants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employer/manage_applicants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.7083335">
+              <caret line="122" column="57" selection-start-line="122" selection-start-column="57" selection-end-line="122" selection-end-column="57" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1463286494782" expanded="true" signature="859:898" placeholder="select * fro..application..." />
+                <marker date="1463286494782" expanded="true" signature="937:970" placeholder="select * fro..jobs..." />
+                <marker date="1463286494782" expanded="true" signature="6386:6426" placeholder="select * fro..jobseeker..." />
+                <marker date="1463286494782" expanded="true" signature="6546:6609" placeholder="select * fro..selection..." />
+                <marker date="1463286494782" expanded="true" signature="7683:7748" placeholder="select * fro..application..." />
+                <marker date="1463286494782" expanded="true" signature="7927:7937" placeholder="..." />
+                <marker date="1463286494782" expanded="true" signature="8007:8019" placeholder="..." />
+                <marker date="1463286494782" expanded="true" signature="8317:8660" placeholder="..." />
+                <marker date="1463286494782" expanded="true" signature="8382:8653" placeholder="..." />
+                <marker date="1463286494782" expanded="true" signature="8472:8540" placeholder="..." />
+                <marker date="1463286494782" expanded="true" signature="8478:8531" placeholder="..." />
+                <marker date="1463286494782" expanded="false" signature="8563:8578" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -112,16 +145,6 @@
                 <marker date="1463284223667" expanded="false" signature="1628:1643" placeholder="..." />
                 <marker date="1463284223667" expanded="true" signature="2030:2076" placeholder="select * fro..employer..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload_logo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/upload_logo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -180,8 +203,6 @@
         <option value="$PROJECT_DIR$/employer/change_logo.php" />
         <option value="$PROJECT_DIR$/employer/config.php" />
         <option value="$PROJECT_DIR$/employer/deletejob.php" />
-        <option value="$PROJECT_DIR$/employer/manage_applicants.php" />
-        <option value="$PROJECT_DIR$/employer/managejobs.php" />
         <option value="$PROJECT_DIR$/employer/notify.php" />
         <option value="$PROJECT_DIR$/employer/post_jobs.php" />
         <option value="$PROJECT_DIR$/employer/process_postjob.php" />
@@ -196,7 +217,6 @@
         <option value="$PROJECT_DIR$/js/valid.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/forgotpass.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/process_login.php" />
@@ -209,6 +229,9 @@
         <option value="$PROJECT_DIR$/jobseeker/search.js" />
         <option value="$PROJECT_DIR$/jobseeker/home_search.php" />
         <option value="$PROJECT_DIR$/jobseeker/profile.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/employer/manage_applicants.php" />
+        <option value="$PROJECT_DIR$/employer/managejobs.php" />
       </list>
     </option>
   </component>
@@ -281,7 +304,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jobseeker" />
+              <option name="myItemId" value="employer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -481,21 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/employer/manage_applicants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employer/managejobs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/employer/notify.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769">
@@ -660,14 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769">
@@ -786,7 +786,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jobseeker/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21348314">
+        <state vertical-scroll-proportion="-5.5416665">
           <caret line="81" column="55" selection-start-line="81" selection-start-column="55" selection-end-line="81" selection-end-column="55" />
           <folding>
             <marker date="1463284505820" expanded="true" signature="960:1049" placeholder="select * fro..login..." />
@@ -799,6 +799,56 @@
             <marker date="1463284505820" expanded="true" signature="9866:9934" placeholder="..." />
             <marker date="1463284505820" expanded="true" signature="9872:9925" placeholder="..." />
             <marker date="1463284505820" expanded="false" signature="9957:9972" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2295345">
+          <caret line="179" column="59" selection-start-line="179" selection-start-column="59" selection-end-line="179" selection-end-column="59" />
+          <folding>
+            <element signature="e#6#728#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employer/manage_applicants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.7083335">
+          <caret line="122" column="57" selection-start-line="122" selection-start-column="57" selection-end-line="122" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1463286494782" expanded="true" signature="859:898" placeholder="select * fro..application..." />
+            <marker date="1463286494782" expanded="true" signature="937:970" placeholder="select * fro..jobs..." />
+            <marker date="1463286494782" expanded="true" signature="6386:6426" placeholder="select * fro..jobseeker..." />
+            <marker date="1463286494782" expanded="true" signature="6546:6609" placeholder="select * fro..selection..." />
+            <marker date="1463286494782" expanded="true" signature="7683:7748" placeholder="select * fro..application..." />
+            <marker date="1463286494782" expanded="true" signature="7927:7937" placeholder="..." />
+            <marker date="1463286494782" expanded="true" signature="8007:8019" placeholder="..." />
+            <marker date="1463286494782" expanded="true" signature="8317:8660" placeholder="..." />
+            <marker date="1463286494782" expanded="true" signature="8382:8653" placeholder="..." />
+            <marker date="1463286494782" expanded="true" signature="8472:8540" placeholder="..." />
+            <marker date="1463286494782" expanded="true" signature="8478:8531" placeholder="..." />
+            <marker date="1463286494782" expanded="false" signature="8563:8578" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employer/managejobs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61476725">
+          <caret line="98" column="151" selection-start-line="98" selection-start-column="151" selection-end-line="98" selection-end-column="151" />
+          <folding>
+            <marker date="1463286626716" expanded="true" signature="879:910" placeholder="select * fro..jobs..." />
+            <marker date="1463286626716" expanded="true" signature="4127:4145" placeholder="..." />
+            <marker date="1463286626716" expanded="true" signature="4294:4312" placeholder="..." />
+            <marker date="1463286626716" expanded="true" signature="4549:4892" placeholder="..." />
+            <marker date="1463286626716" expanded="true" signature="4614:4885" placeholder="..." />
+            <marker date="1463286626716" expanded="true" signature="4704:4772" placeholder="..." />
+            <marker date="1463286626716" expanded="true" signature="4710:4763" placeholder="..." />
+            <marker date="1463286626716" expanded="false" signature="4795:4810" placeholder="..." />
           </folding>
         </state>
       </provider>

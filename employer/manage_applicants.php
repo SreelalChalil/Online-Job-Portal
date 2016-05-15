@@ -120,6 +120,7 @@ $emp_id=$_SESSION['eid'];
 <div class="container-fluid">
     <h3 class="text-center" style="margin-top: 50px;">These users have applied for the job : <?php echo $q3row['title'];?></h3>
     <h4 class="text-center">You can view their profile, select or reject them.</h4>
+    <div class="page-header" style="background: steelblue"></div>
     <?php if(mysqli_num_rows($q1)>0) { ?>
         <table class="table table-responsive" style="margin-top: 30px;">
             <th>SI NO:</th>
