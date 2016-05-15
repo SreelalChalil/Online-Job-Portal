@@ -62,8 +62,7 @@ else {
         //$r2 = mysqli_fetch_array($query2);
 
         echo " <tr> ";
-        echo "<td>" . $row['ename'] . "</td>";
-        echo "<td>" . $row['title'] . "</td>";
+        echo "<td><a style='color: blue;'  href='view_jobs.php?jid=".$row['jobid']."'>" . $row['title'] . "</a></td>";
         echo "<td>" . $row['postdate'] . "</td>";
         echo "<td>" . substr($row['jprofile'],0,120) . "......</td>";    
         echo "</tr>";
