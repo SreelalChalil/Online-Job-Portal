@@ -79,7 +79,7 @@ else
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Profile<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="profile.php">Profile<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Notifications</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options<span class="caret"></span></a>
@@ -91,11 +91,11 @@ else
                     </ul>
                 </li>
             </ul>
-            <form class="navbar-form navbar-left" role="search" method="get" action="search.php">
+            <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <input type="text" name="keyword" class="form-control" placeholder="Search Jobs">
+                    <input type="text" name="keyword" id="keyword" class="form-control" placeholder="Search Jobs">
                 </div>
-                <button type="submit" class="btn btn-default">Search</button>
+                <button type="button" class="btn btn-default" onclick="search();">Search</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -135,11 +135,13 @@ else
         <!-- profile pic --->
 </aside>
     <!------------------------------------------------------------------------------- -->
+
 <div id="header">
 <h3> Find jobs, edit your profile or update your current resume for better jobs!</h3>
 </div>
 
 <section class="col-sm-7">
+    <div id="searchcontent">
 <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#details">Your Profile</a></li>
     <li><a data-toggle="tab"  href="#recjobs">Recommended Jobs</a></li>
@@ -295,6 +297,7 @@ else
     </div>
     <!------------------------------------------------------------------------------- -->
 </div> <!-- tab contents -->
+    </div><!-- closing searchcontent -->
 </section> <!-- section 2 ends here -->
 
 </div> <!-- main content div -->
@@ -303,6 +306,7 @@ else
 <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
 <link href="../css/main.css" rel="stylesheet">
 <link href="../css/jobseeker.css" rel="stylesheet">
+<script src="search.js"></script>
 <script src="../js/jquery-1.12.0.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 
