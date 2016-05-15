@@ -58,7 +58,7 @@ $location=$country.",".$state.",".$city;
 mysqli_close($db2);
 mysqli_select_db($db1,"jobportal");
 
-$query4="insert into jobs (eid,title,jobdesc,vacno,experience,basicpay,fnarea,location,industry,ugqual,pgqual,profile,postdate )VALUES ('$eid','$desig','$desc','$vacno','$exp','$pay','$fnarea','$location','$indtype','$ug','$pg','$profile','$date')";
+$query4="insert into jobs (eid,title,jobdesc,vacno,experience,basicpay,fnarea,location,industry,ugqual,pgqual,jprofile,postdate )VALUES ('$eid','$desig','$desc','$vacno','$exp','$pay','$fnarea','$location','$indtype','$ug','$pg','$profile','$date')";
 
 if (!mysqli_query($db1,$query4))
 {

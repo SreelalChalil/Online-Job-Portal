@@ -104,9 +104,7 @@ else
                         <li><a href="#">Account Overview</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Account Settings</a></li>
-
-
-                    </ul>
+                   </ul>
                 </li>
                 <li><a href="../logout.php">Logout</a></li>
             </ul>
@@ -135,13 +133,12 @@ else
         <!-- profile pic --->
 </aside>
     <!------------------------------------------------------------------------------- -->
-
+<section class="col-sm-7">
+    <div id="searchcontent">
 <div id="header">
 <h3> Find jobs, edit your profile or update your current resume for better jobs!</h3>
 </div>
 
-<section class="col-sm-7">
-    <div id="searchcontent">
 <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#details">Your Profile</a></li>
     <li><a data-toggle="tab"  href="#recjobs">Recommended Jobs</a></li>

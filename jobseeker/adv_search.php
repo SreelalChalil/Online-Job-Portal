@@ -35,7 +35,7 @@ if($company=="" || $location =="" || $desig =="" ||  $skills==""){
 
 }
 else{
-$query = "select * from jobs  where title = '$desig'  or (location LIKE '%" . $location . "%') or (profile LIKE '%" . $skills . "%') ";
+$query = "select * from jobs  where title = '$desig'  or (location LIKE '%" . $location . "%') or (jprofile LIKE '%" . $skills . "%') ";
 $result = mysqli_query($db1, $query);
 
 if (mysqli_num_rows($result) == 0)
@@ -51,10 +51,10 @@ else {
 
 <html>
 <table class="table table-striped">
-    <th>Company</th>
-    <th>Position</th>
-    <th style="width: 20px;">Description:</th>
-    <th>Post Date</th>
+    <th>Company:</th>
+    <th>Position:</th>
+    <th>Description:</th>
+    <th>Post Date:</th>
 
     <?php
     echo "<h4> Search Results Matching :";

@@ -109,7 +109,7 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
             }else echo" <img src='../images/paris.jpg'>";
             ?>
             <strong><?php echo $row['ename']; ?></strong><br>
-            <p> <button type="button" class="btn btn-default" ><a href="change_logo.php">Change Company Logo</a> </button>
+            <p><a class="btn btn-default" href="change_logo.php">Change Company Logo</a> 
         </div>
     </aside>
     <section class="col-sm-9">

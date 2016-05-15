@@ -107,7 +107,7 @@ $result=mysqli_fetch_array($query);
 
 <div class="container">
     <center><h2>view Job </h2></center>
-
+    <div class="page-header" style="background: #f4511e"></div>
     <button class="btn btn-warning" onclick="goBack()"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back to Manage Jobs</button>
 
 <div id="tablecontent">
@@ -159,7 +159,7 @@ $result=mysqli_fetch_array($query);
         </tr>
         <tr>
             <td class="tbold">Desired Candidate Profile:</td>
-            <td><?php echo $result['profile']; ?></td>
+            <td><?php echo $result['jprofile']; ?></td>
         </tr>
 
     </table>

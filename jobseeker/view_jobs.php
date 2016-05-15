@@ -164,7 +164,7 @@ $result=mysqli_fetch_array($query);
         </tr>
         <tr>
             <td class="tbold">Desired Candidate Profile:</td>
-            <td><?php echo $result['profile']; ?></td>
+            <td><?php echo $result['jprofile']; ?></td>
         </tr>
 
     </table>

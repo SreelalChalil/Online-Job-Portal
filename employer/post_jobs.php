@@ -96,7 +96,9 @@ alert("Fill in with correct information");
 
 
         <div class="container">
+        <br/>
         <center><h2>Post Jobs </h2></center>
+        <div class="page-header" style="background: #f4511e"></div>
         <h3> Job Details: </h3>
           <div class="page-header" />
         <form id="job_post" role="form" onsubmit="return checkForm();" method="post" class="form-horizontal" action="process_postjob.php">
