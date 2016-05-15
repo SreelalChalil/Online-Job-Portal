@@ -32,7 +32,7 @@ if($keyword==""){
 
 }
 else{
-$query = "select * from jobs where title LIKE '%" . $keyword . "%'";
+$query = "select * from jobs  join employer  on jobs.eid = employer.eid  where title LIKE '%" . $keyword . "%' or employer.ename LIKE '%".$keyword."%' or employer.profile LIKE '%" . $keyword . "%'" ;
 $result = mysqli_query($db1, $query);
 
 if (mysqli_num_rows($result) == 0)
@@ -51,23 +51,24 @@ else {
     <th>Company</th>
     <th>Position</th>
     <th>Post Date</th>
-
+    <th>Candidate Profile</th>
     <?php
-    echo "<h3> Search Results Matching :" . $keyword . "</h3>";
+     
+    echo "<h3 style='color:green'> Search Results Matching: " . $keyword . "</h3>
+     <div class='page-header' style='background:skyblue'></div> ";
 
     while ($row = mysqli_fetch_array($result)) {
-        $query2 = mysqli_query($db1, "select * from employer where eid = '$row[eid]'");
-        $r2 = mysqli_fetch_array($query2);
+        //$query2 = mysqli_query($db1, "select * from employer where eid = '$row[eid]'");
+        //$r2 = mysqli_fetch_array($query2);
 
         echo " <tr> ";
-        /*for ($i=0; $i <3 ; $i++) {*/
-        echo "<td>" . $r2['ename'] . "</td>";
+        echo "<td>" . $row['ename'] . "</td>";
         echo "<td>" . $row['title'] . "</td>";
         echo "<td>" . $row['postdate'] . "</td>";
-
+        echo "<td>" . substr($row['jprofile'],0,120) . "......</td>";    
         echo "</tr>";
     }
-
+   
     }
 
     }     ?>

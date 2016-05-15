@@ -208,7 +208,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </div> <!-- Contact -->
 
 </div> <!-- sub content -->
-
+ <div class="page-header" style="background: #f4511e"></div>
 </div> <!-- Container -->
 <!-- Set height and width with CSS -->
 <div id="googleMap" style="height:400px;width:100%;"></div>
