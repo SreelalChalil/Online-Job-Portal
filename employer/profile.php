@@ -114,10 +114,11 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
     </aside>
     <section class="col-sm-9">
     <div id="header">
-        <h3> Post a job to get the best employee for your organization</h3>
+        <h3> Post jobs and find the right candidates!</h3>
     </div>
 <div class="container">
-    <h3>Your Profile:</h3> <h4>This is visible to job seekers</h4>
+    <h3>Company Profile:</h3> <h4>The following informations are visible to job seekers.
+        We reccomend you to always update these informations.</h4>
     <hr>
     <table class="table">
         <tr>
