@@ -1,7 +1,7 @@
 # Online Job Portal Project
 Online Job Portal project is web application built using PHP, MySql as backend and HTML JavaScript &amp; Bootstrap as Frontend. 
 
-<h3>Web Learners Project!<h3>
+<h3>Web Learners Project!</h3>
 
 We’ve crafted this software as a mini project for academic requirement in Computer Science and Engineering.
 
