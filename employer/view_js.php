@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  */
 session_start();
-include_once('config.php');
+include_once('../config.php');
 $q = mysqli_query($db1,"select * from login join jobseeker on login.log_id=jobseeker.log_id WHERE jobseeker.user_id = $_GET[jsid]");
 $row=mysqli_fetch_array($q);
 ?>

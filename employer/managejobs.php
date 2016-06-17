@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  */
 session_start();
-include_once('config.php');
+include_once('../config.php');
 $query=mysqli_query($db1,"select * from jobs where eid = $_SESSION[eid]");
 //$result=mysqli_fetch_array($query);
 //echo $result['title'];
