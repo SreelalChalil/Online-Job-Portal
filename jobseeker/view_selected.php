@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  */
 session_start();
-include_once('config.php');
+include_once('../config.php');
 ?>
 <html>
 <head>

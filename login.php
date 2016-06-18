@@ -59,9 +59,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
     <span class="glyphicon glyphicon-user"></span> Sign Up <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li><a href="register_user.php">Jobseeker</a></li>
+            <li><a href="jobseeker/register_user.php">Jobseeker</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="register_emp.php">Company</a></li>
+            <li><a href="employer/register_emp.php">Company</a></li>
         </ul>
       </li>
       </ul>
