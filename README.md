@@ -10,6 +10,7 @@ We’ve crafted this software as a mini project for academic requirement in Comp
     The Php programs are written using basic concepts, that anyone can understand.
     We haven't used any Php framework (such as code ignitor) or OOP concepts.
 
+Read the wiki section to get started.
 </br>
 <h3>Author:</h3> 
 Sreelal C
