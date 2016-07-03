@@ -5,9 +5,9 @@ Online Job Portal project is web application built using PHP, MySQL as backend a
 
     This is not a production ready software.
     This software is developed as a mini project for academic requirement in Computer Science and Engineering.
-    This project is published under GNU GPL V3 and maintained for similar academic needs and to help beginners in Php.
+    This project is published under GNU GPL V3 and maintained for similar academic requiremets.
     Read the wiki section to get started.
-</br>
+
 <h3>Author:</h3> 
 Sreelal C
 
