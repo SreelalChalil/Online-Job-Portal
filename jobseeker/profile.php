@@ -114,21 +114,21 @@ else
 <!------------------------------------------------------------------------------- -->
 <div class="container-fluid" id="content">
 
-    <aside class="col-sm-3" role="complementary">
-        <div class="region region-sidebar-first well" id="sidebar">
-           <h3 style="color: #009999" class="text-center" > Welcome <?php echo $row['name']; ?> </h3>
-        </div>
+<aside class="col-sm-3" role="complementary">
+    <div class="region region-sidebar-first well" id="sidebar">
+     <h3 style="color: #009999" class="text-center" > Welcome <?php echo $row['name']; ?> </h3>
+     </div>
 
-        <!-- profile pic -->
-        <div class="thumbnail text-center">
-            <div class="img thumbnail">
-                <?php if($row['photo']!="") {
-                    echo "<img src = '../uploads/images/".$row['photo']."' class='img-circle' >";
-                }else echo" <img src='../images/paris.jpg'>";
-                ?>
+  <!-- profile pic -->
+    <div class="thumbnail text-center">
+        <div class="img thumbnail">
+           <?php if($row['photo']!="") {
+              echo "<img src = '../uploads/images/".$row['photo']."' class='img-circle' >";
+             }else echo" <img src='../images/paris.jpg'>";
+           ?>
         </div>
-            <strong><?php echo $row['name']; ?> </strong>
-            <!-- Button trigger modal -->
+         <strong><?php echo $row['name']; ?> </strong>
+          <!-- Button trigger modal -->
           <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#changeimg">Change Image </button></a>
 <!--------------------------- profile pic --------------------------------------- -->
 <div class="modal fade" id="changeimg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -155,6 +155,7 @@ else
   </div>
 </div>
 <!-- profile pic -->
+
 </aside>
 
 <!------------------------------------------------------------------------------- -->
