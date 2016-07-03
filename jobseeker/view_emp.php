@@ -72,15 +72,34 @@ $result=mysqli_fetch_array($query);
         </div><!-- /.navbar-collapse -->
     </nav>
 </div><!-- /.container-fluid -->
-
 <body>
-<div class="container">
+
+<!-- left side info and logo ---------------------------------- -->
+ <aside class="col-sm-3 text-center" role="complementary">
+        <div class="thumbnail text-center">
+            <?php if($result['logo']!="") {
+                echo "<img src = '../uploads/logo/".$result['logo']."' class='img-rounded' >";
+            }else echo" <img src='../images/fallbacklogo.jpg'>";
+            ?>
+            <strong><?php echo $result['ename']; ?></strong><br> <br>
+            </strong> &nbsp;&nbsp;
+            <a class="btn btn-primary btn-block" href="jobs_by_emp.php?eid=<?php echo $empid; ?>&ename=<?php echo $result['ename']; ?>"
+             style="font-size: 16px;"> View All jobs of <?php echo $result['ename']; ?> </a>
+        </div>
+    </aside>
+<!-- left side info ends here ---------------------------------- -->
+
+<!-- right side section ------------------- starts here ------------------- -->
+<section class="col-sm-9">
 <div class="container" style="margin-top: 30px;" id="tablecontent">
-    <h2>Employer: <?php echo $result['ename']; ?></h2>
+
+    <h2 style="text-align:center">Employer: <?php echo $result['ename']; ?></h2>
+    <div class='page-header' style='background:skyblue'></div>
+
 <table class="table table-responsive">
     <tr>
         <td class="tbold">Employer Name:</td>
-        <td><strong><?php echo $result['ename']; ?></strong> &nbsp;&nbsp;<a href="jobs_by_emp.php?eid=<?php echo $empid; ?>&ename=<?php echo $result['ename']; ?>" style="font-size: 16px;"> View All jobs of this employer </a></td>
+        <td><strong><?php echo $result['ename']; ?></td>
     </tr>
     <tr>
         <td class="tbold">Employer Type:</td>

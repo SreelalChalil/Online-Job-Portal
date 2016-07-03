@@ -6,11 +6,12 @@ body{
     background: white;
     font-family: Ubuntu ;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px;
 
 }
 table{
   background:white;
+  font-size: 16px;
 }
 label{
   color: black;

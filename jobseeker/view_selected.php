@@ -108,7 +108,7 @@ include_once('../config.php');
         </div> </div>";
         }
         else {
-            echo "<table class=' table'> <th>Company</th><th>Job Title</th><th>Job Detail</th><th>Selection Date</th><th>Action</th>";
+            echo "<table class=' table'> <th style='width:150px'>Employer</th><th>Job Title</th><th>Job Detail</th><th>Selection Date</th><th>Action</th>";
             while ($qrow = mysqli_fetch_array($q)) {
                 $qdet=mysqli_query($db1,"select * from jobs where jobid=$qrow[job_id]");
                 $jdet=mysqli_fetch_array($qdet);

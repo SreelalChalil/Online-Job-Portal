@@ -114,27 +114,54 @@ else
 <!------------------------------------------------------------------------------- -->
 <div class="container-fluid" id="content">
 
-    <aside class="col-sm-3" role="complementary">
-        <div class="region region-sidebar-first well" id="sidebar">
-           <h3 style="color: #009999" class="text-center" > Welcome <?php echo $row['name']; ?> </h3>
-        </div>
+<aside class="col-sm-3" role="complementary">
+    <div class="region region-sidebar-first well" id="sidebar">
+     <h3 style="color: #009999" class="text-center" > Welcome <?php echo $row['name']; ?> </h3>
+     </div>
 
-        <!-- profile pic -->
-        <div class="thumbnail text-center">
-            <div class="img thumbnail">
-                <?php if($row['photo']!="") {
-                    echo "<img src = '../uploads/images/".$row['photo']."' class='img-circle' >";
-                }else echo" <img src='../images/paris.jpg'>";
-                ?>
+  <!-- profile pic -->
+    <div class="thumbnail text-center">
+        <div class="img thumbnail">
+           <?php if($row['photo']!="") {
+              echo "<img src = '../uploads/images/".$row['photo']."' class='img-circle' >";
+             }else echo" <img src='../images/paris.jpg'>";
+           ?>
         </div>
-            <strong><?php echo $row['name']; ?> </strong>
-            <!-- Button trigger modal -->
-          <p> <a href="chane_image.php"><button type="button" class="btn btn-default" >Change Image </button></a>
-        <!-- profile pic --->
+         <strong><?php echo $row['name']; ?> </strong>
+          <!-- Button trigger modal -->
+          <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#changeimg">Change Image </button></a>
+<!--------------------------- profile pic --------------------------------------- -->
+<div class="modal fade" id="changeimg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Change or upload your profile image</h4>
+      </div>
+      <div class="modal-body">
+       <form method="post" action="../upload.php?type=image" enctype="multipart/form-data">
+            <div class="form-group form-inline">
+                <label for="file" class="control-label">Select your photo:</label>
+                <input type=file name="file" id="file" class="form-control">
+            </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" id="submit" name="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- profile pic -->
+
 </aside>
-    <!------------------------------------------------------------------------------- -->
+
+<!------------------------------------------------------------------------------- -->
 <section class="col-sm-7">
-    <div id="searchcontent">
+<div id="searchcontent">
+<!-- Search content overlay div starts here ------------------------------------ --- -->
 <div id="header">
 <h3> Find jobs, edit your profile or update your current resume for better jobs!</h3>
 </div>
@@ -147,11 +174,11 @@ else
 </ul>
 
 <div class="tab-content">
-    <!------------------------------------------------------------------------------- -->
+<!------------------------------------------------------------------------------- -->
     <div id="details" class="tab-pane fade in active" style="margin-top: 50px;">
         <h3> Your Profile</h3>
     <table class="table" >
-        <tr >
+        <tr>
             <td class="tbold">Full Name:</td>
             <td><?php echo $row['name']; ?></td>
 
@@ -217,10 +244,12 @@ else
         ?>
         </table>
     </div>
-    <!------------------------------------------------------------------------------- -->
+
+<!--------------------------------- Resume ---------------------------------------------- -->
+
     <div id="resume" class="tab-pane fade">
         <div>
-    <form action="../upload.php" enctype="multipart/form-data" method="post">
+    <form action="../upload.php?type=file" enctype="multipart/form-data" method="post">
        <?php if($row['Resume']==""){
     echo "<div class='alert alert-danger alert-dismissible' role='alert'>
             <button type='button' class='close'  data-dismiss='alert' aria-label='Close'><span
@@ -256,45 +285,42 @@ else
            <form role="form">
               <table>
                   <tr >
-                      <td class="tbold">Company Name:</td>
-                      <td><input type="text" class="form-control" id="company" name="company" required placeholder="Company Name:"> </td>
+                    <td class="tbold">Company Name:</td>
+                    <td><input type="text" class="form-control" id="company" name="company" required placeholder="Company Name:"> </td>
                   </tr>
                   <tr>
                     <td class="tbold">Location:</td>
-                      <td>
-                         <input type="text" class="form-control" id="location" name="location" placeholder="Your Prefered Location">
-                      </td>
+                    <td>
+                      <input type="text" class="form-control" id="location" name="location" placeholder="Your Prefered Location">
+                    </td>
                   </tr>
                   <tr>
-                      <td class="tbold">Job Title:</td>
-                     <td><input type="text" class="form-control" id="desig" name="desig" required placeholder="Job Title/ Designation"></td>
+                    <td class="tbold">Job Title:</td>
+                    <td><input type="text" class="form-control" id="desig" name="desig" required placeholder="Job Title/ Designation"></td>
                   </tr>
                   <tr>
                     <td class="tbold">Skills:</td>
-                     <td><input type="text" class="form-control" id="skills" name="skills" required placeholder="Key Skills"></td>
+                    <td><input type="text" class="form-control" id="skills" name="skills" required placeholder="Key Skills"></td>
                   </tr>
-
                   <tr>
-                      <td class="tbold">Industy type:</td>
-                      <td><input type = "text" class="form-control" id="industry" name="industry" placeholder="Industry Type"></td>
-
-                  </tr>
+                    <td class="tbold">Industy type:</td>
+                    <td><input type = "text" class="form-control" id="industry" name="industry" placeholder="Industry Type"></td>  </tr>
                   <tr>
                       <td></td>
                       <td><button type="button" onclick="advsearch()" class="btn btn-success"><span class="glyphicon glyphicon-search"></span> Search Jobs</button></td>
                   </tr>
               </table>
-
            </form>
        </div>
         <hr>
         <div id="subcontent">
-
+        <!---- sub content shows advanced search results --------- -->
         </div>
     </div>
-    <!------------------------------------------------------------------------------- -->
+<!------------------------------------------------------------------------------- -->
 </div> <!-- tab contents -->
-    </div><!-- closing searchcontent -->
+
+</div><!-- closing searchcontent -->
 </section> <!-- section 2 ends here -->
 
 </div> <!-- main content div -->

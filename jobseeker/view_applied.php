@@ -73,11 +73,12 @@ $q1=mysqli_query($db1,"select * from application WHERE user_id=$jsid");
 </div><!-- /.container-fluid -->
 
 <body>
-<div class="container-fluid">
+<div class="container">
     <h3 class="text-center" style="margin-top: 50px; color: #265a88">You Applied for these jobs</h3>
+    <div class='page-header' style='background:skyblue'></div>
      <?php if(mysqli_num_rows($q1)>0) { ?>
 <table class="table table-responsive" style="margin-top: 30px;">
-        <th>Employer</th>
+        <th style="width:150px">Employer</th>
         <th>Job Title</th>
         <th>Job Description</th>
         <th>Date of Posting</th>
