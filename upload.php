@@ -24,7 +24,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 session_start();
 include_once('config.php');
 // Upload and Rename File
-
 if (isset($_POST['submit']))
 {
     $filename = $_FILES["file"]["name"];
