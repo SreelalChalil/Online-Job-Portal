@@ -124,7 +124,7 @@ else
         <div class="img thumbnail">
            <?php if($row['photo']!="") {
               echo "<img src = '../uploads/images/".$row['photo']."' class='img-circle' >";
-             }else echo" <img src='../images/paris.jpg'>";
+             }else echo" <img src='../images/user_fallback.png'>";
            ?>
         </div>
          <strong><?php echo $row['name']; ?> </strong>
