@@ -139,7 +139,7 @@ $emp_id=$_SESSION['eid'];
                     $qsel=mysqli_query($db1,"select * from selection where job_id=$_GET[jobid] and user_id= $result[user_id]");
                     $ressel=mysqli_fetch_array($qsel);
                     echo " <tr> ";
-                    echo  "<td>".$i."</td>";
+                    echo "<td>".$i."</td>";
                     echo "<td> <a href='view_js.php?jsid=" . $result['user_id'] . "'>".$result['name']."</a></td>";
                     echo "<td> <b>Basic Education: </b> " . $result['basic_edu'].",  <b>Master Education: </b> ".$result['master_edu']."</td>";
                     echo "<td>" . $result['skills'] . "</td>";
@@ -148,7 +148,7 @@ $emp_id=$_SESSION['eid'];
                         echo "<td> <button type='button' class='btn btn-success' onclick='selectJs(" . $user_id . "," . $_GET['jobid'] . "," . $emp_id . ");'>Select Candidate</button> </td>";
                         echo "<td> <button type='button' class='btn btn-danger' onclick='rejectJs(" . $user_id . "," . $_GET['jobid'] . "," . $emp_id . ");'>Reject Candidate</button> </td>";
                     }
-                    else{
+                    else {
                         $qrej=mysqli_query($db1,"select * from application where job_id=$_GET[jobid] and user_id= $result[user_id] ");
                         $rowrej=mysqli_fetch_array($qrej);
                         if($rowrej['status']==2)

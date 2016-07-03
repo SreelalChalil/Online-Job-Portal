@@ -301,10 +301,10 @@ alert("Fill in with correct information");
         </form>
            </div>
     </body>
-    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
-    <link href="../css/main.css" rel="stylesheet">
-    <link href="../css/employer.css" rel="stylesheet">
-    <script type="text/javascript" src="../js/validate.js"></script>
+ <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+ <link href="../css/main.css" rel="stylesheet">
+ <link href="../css/employer.css" rel="stylesheet">
+ <script type="text/javascript" src="../js/validate.js"></script>
  <script src="../js/jquery-1.12.0.min.js"></script>
  <script src="../js/bootstrap.min.js"></script>
  <script src="../location/location.js"></script>

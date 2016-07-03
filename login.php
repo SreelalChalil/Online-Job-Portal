@@ -105,7 +105,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 Apply to jobs in just one click.
                 Apply to thousands of jobs posted daily.
             </p>
-            <p><a class="btn btn-default" href="register_user.php">Register Today<span class="glyphicon glyphicon-arrow-right"></span> </a></p>
+            <p><a class="btn btn-default" href="jobseeker/register_user.php">Register Today<span class="glyphicon glyphicon-arrow-right"></span> </a></p>
         </div>
             </div>
         <div class="askreg">
@@ -114,7 +114,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <p> Post a job in easy steps and start receiving applications the same day.
                 Find the right candidates easily and quickly through our Search feature.
             </p>
-            <p><a class="btn btn-default" href="register_emp.php">Register Your Company <span class="glyphicon glyphicon-arrow-right"></span> </a></p>
+            <p><a class="btn btn-default" href="employer/register_emp.php">Register Your Company <span class="glyphicon glyphicon-arrow-right"></span> </a></p>
         </div>
         </div>
     </div>

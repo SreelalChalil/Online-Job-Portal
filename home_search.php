@@ -57,13 +57,12 @@ else {
 
     while ($row = mysqli_fetch_array($result)) {
         //$query2 = mysqli_query($db1, "select * from employer where eid = '$row[eid]'");
-        //$r2 = mysqli_fetch_array($query2);
-
+        //$r2 = mysqli_fetch_array($query2)
         echo " <tr> ";
         echo "<td>" . $row['ename'] . "</td>";
         echo "<td>" . $row['title'] . "</td>";
         echo "<td>" . $row['postdate'] . "</td>";
-       echo "<td>" . substr($row['jprofile'],0,120) . "......</td>";  
+        echo "<td>" . substr($row['jprofile'],0,120) . "......</td>";  
         echo "</tr>";
     }
     echo "<h4> <a href='login.php'>Login to view more</a> </h4>";

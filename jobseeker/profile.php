@@ -158,13 +158,21 @@ else
 
 </aside>
 
-<!------------------------------------------------------------------------------- -->
+    <!------------------------------------------------------------------------------- -->
 <section class="col-sm-7">
 <div id="searchcontent">
 <!-- Search content overlay div starts here ------------------------------------ --- -->
 <div id="header">
 <h3> Find jobs, edit your profile or update your current resume for better jobs!</h3>
 </div>
+
+    <!------------------------------------------------------------------------------- -->
+
+<section class="col-sm-7">
+    <div id="searchcontent">
+    <div id="header">
+        <h3> Find jobs, edit your profile or update your current resume for better jobs!</h3>
+    </div>
 
 <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#details">Your Profile</a></li>
@@ -173,11 +181,18 @@ else
     <li><a data-toggle="tab" href="#advsearch">Advanced Search</a></li>
 </ul>
 
-<div class="tab-content">
+    <!------------------------------------------------------------------------------- -->
+
+    <div class="tab-content">
+
 <!------------------------------------------------------------------------------- -->
     <div id="details" class="tab-pane fade in active" style="margin-top: 50px;">
         <h3> Your Profile</h3>
-    <table class="table" >
+        <table class="table">
+        <tr>
+        <div id="details" class="tab-pane fade in active" style="margin-top: 50px;">
+        <h3> Your Profile</h3>
+        <table class="table" >
         <tr>
             <td class="tbold">Full Name:</td>
             <td><?php echo $row['name']; ?></td>
