@@ -102,21 +102,27 @@ $result=mysqli_fetch_array($query);
 </div><!-- /.container-fluid -->
 
 <div class="container">
-    <center><h2>view Job </h2></center>
+<?php
+    $qc=mysqli_query($db1,"select * from employer where eid=$result[eid]");
+    $res=mysqli_fetch_array($qc);
+?>
 
-    <button class="btn btn-warning" onclick="goBack()"><span class="glyphicon glyphicon-arrow-left"></span> Back </button>
 
+<center><h3>Details of <?php echo $result['title']; ?> by <?php echo $res['ename']; ?> </h3></center>
+<button class="btn btn-warning btn-lg" onclick="goBack()"><span class="glyphicon glyphicon-arrow-left"></span> Back </button>
+         <button type="button" class="btn btn-success btn-lg" onclick="apply(<?php echo $result['jobid']; ?>)">
+         <span class='glyphicon glyphicon-ok'></span> Apply for this Job
+         </button>
+<div id="applydiv"></div>
+<div class="page-header" style="background: midnightblue"></div>
+    
 <div id="tablecontent">
     <h3> Job Details: </h3>
+
     <table class="table table-responsive">
         <tr>
-            <?php
-            $qc=mysqli_query($db1,"select * from employer where eid=$result[eid]");
-            $res=mysqli_fetch_array($qc);
-            ?>
             <td class="tbold"> Company: </td>
             <td> <?php echo "<a href='view_emp.php?id=".$res['eid']."'>".$res['ename']."</a>"; ?></td>
-
         </tr>
         <tr>
             <td class="tbold">Designation:</td>
@@ -167,19 +173,8 @@ $result=mysqli_fetch_array($query);
             <td><?php echo $result['jprofile']; ?></td>
         </tr>
 
-    </table>
-<table class="table">
-    <tr>
-        <td>
-            <button type="button" class="btn btn-success" onclick="apply(<?php echo $result['jobid']; ?>)">
-                <span class='glyphicon glyphicon-ok'></span> Apply for this Job
-            </button>
-        </td>
-    </tr>
 </table>
-</div> <!-- table content -->
-    <div id="applydiv"></div>
-    <div class="page-header" />
+<div class="page-header" />
 
 </div>
 </body>

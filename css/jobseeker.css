@@ -24,6 +24,7 @@ td.tbold{
 }
 table{
     background: transparent;
+     font-size: 16px;
 }
 label{
     width: inherit;

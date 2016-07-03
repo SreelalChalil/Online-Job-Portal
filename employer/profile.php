@@ -109,8 +109,33 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
             }else echo" <img src='../images/paris.jpg'>";
             ?>
             <strong><?php echo $row['ename']; ?></strong><br>
-            <p><a class="btn btn-default" href="change_logo.php">Change Company Logo</a> 
+            <p><button class="btn btn-default" data-toggle="modal" data-target="#changelogo">Change Company Logo
         </div>
+<!------------- logo ------------------------------------- -->
+   <div class="modal fade" id="changelogo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Change or upload your profile image</h4>
+      </div>
+      <div class="modal-body">
+       <form method="post" action="../upload.php?type=logo" enctype="multipart/form-data">
+            <div class="form-group form-inline">
+                <label for="file" class="control-label">Select your Logo:</label>
+                <input type=file name="file" id="file" class="form-control">
+            </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" id="submit" name="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ----------- change logo ends here ------------------------------------------------- -->
     </aside>
     <section class="col-sm-9">
     <div id="header">
