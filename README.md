@@ -11,7 +11,7 @@ Online Job Portal project is web application built using PHP, MySQL as backend a
 <h3>Author:</h3> 
 Sreelal C
 
-<h2> Liscense </h2>
+<h2> License </h2>
 Online-Job-Portal - A web application built on PHP HTML & javascript</br>
 Copyright (C) 2016  Sreelal C
 
