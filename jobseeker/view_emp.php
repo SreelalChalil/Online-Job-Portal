@@ -27,13 +27,17 @@ $empid=$_GET['id'];
 $query=mysqli_query($db1,"select * from employer where eid = $empid");
 $result=mysqli_fetch_array($query);
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>View Employer</title>
 </head>
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>

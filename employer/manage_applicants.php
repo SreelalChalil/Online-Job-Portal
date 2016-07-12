@@ -27,8 +27,12 @@ $q3=mysqli_query($db1,"select * from jobs where jobid = $_GET[jobid]");
 $q3row=mysqli_fetch_array($q3);
 $emp_id=$_SESSION['eid'];
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Manage Jobs</title>
     <script type="text/javascript">
         function selectJs(user,job,emp) {
@@ -75,7 +79,7 @@ $emp_id=$_SESSION['eid'];
 
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
