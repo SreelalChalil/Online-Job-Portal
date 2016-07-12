@@ -21,13 +21,17 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  */
-include_once('config.php');
+include_once('../config.php');
 session_start();
 $jobid=$_GET['jid'];
 $query=mysqli_query($db1,"select * from jobs where jobid = $jobid");
 $result=mysqli_fetch_array($query);
 ?>
+<!DOCTYPE HTML>
 <html>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <META HTTP-EQUIV="refresh" CONTENT="15">
 <head>
     <script>

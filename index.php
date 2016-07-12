@@ -20,6 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ?>
 <html>
     <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Job Portal </title>
         <script type="application/javascript">
             $(document).ready(function(){
@@ -74,9 +77,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="glyphicon glyphicon-user"></span> Register <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="register_user.php">Jobseeker</a></li>
+                        <li><a href="jobseeker/register_user.php">Jobseeker</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="register_emp.php">Employer</a></li>
+                        <li><a href="employer/register_emp.php">Employer</a></li>
                     </ul>
                 </li>
                 <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -137,7 +140,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 </div>
                 <div class="panel-footer">
                     <h3>$0</h3>
-                   <a href="register_emp.php" style="color: inherit"> <button class="btn btn-lg">Sign Up</button></a>
+                   <a href="employer/register_emp.php" style="color: inherit"> <button class="btn btn-lg">Sign Up</button></a>
                 </div>
             </div>
         </div>
@@ -152,7 +155,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 </div>
                 <div class="panel-footer">
                     <h3>$0</h3>
-                    <a href="register_user.php" style="color: inherit"><button class="btn btn-lg">Sign Up</button></a>
+                    <a href="jobseeker/register_user.php" style="color: inherit"><button class="btn btn-lg">Sign Up</button></a>
                 </div>
             </div>
         </div>

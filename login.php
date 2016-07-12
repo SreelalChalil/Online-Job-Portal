@@ -25,6 +25,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <!DOCTYPE html>
 <html lang="en">
   <head>
+	  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Signin</title>
       <?php
       if(isset($_GET['msg']) && ($_GET['msg']=="failed")){
@@ -59,9 +62,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
     <span class="glyphicon glyphicon-user"></span> Sign Up <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li><a href="register_user.php">Jobseeker</a></li>
+            <li><a href="jobseeker/register_user.php">Jobseeker</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="register_emp.php">Company</a></li>
+            <li><a href="employer/register_emp.php">Company</a></li>
         </ul>
       </li>
       </ul>
@@ -105,7 +108,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 Apply to jobs in just one click.
                 Apply to thousands of jobs posted daily.
             </p>
-            <p><a class="btn btn-default" href="register_user.php">Register Today<span class="glyphicon glyphicon-arrow-right"></span> </a></p>
+            <p><a class="btn btn-default" href="jobseeker/register_user.php">Register Today<span class="glyphicon glyphicon-arrow-right"></span> </a></p>
         </div>
             </div>
         <div class="askreg">
@@ -114,7 +117,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <p> Post a job in easy steps and start receiving applications the same day.
                 Find the right candidates easily and quickly through our Search feature.
             </p>
-            <p><a class="btn btn-default" href="register_emp.php">Register Your Company <span class="glyphicon glyphicon-arrow-right"></span> </a></p>
+            <p><a class="btn btn-default" href="employer/register_emp.php">Register Your Company <span class="glyphicon glyphicon-arrow-right"></span> </a></p>
         </div>
         </div>
     </div>

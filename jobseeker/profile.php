@@ -21,7 +21,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  */
-include_once('config.php');
+include_once('../config.php');
 session_start();
 $id = $_SESSION['id'];
 //echo $id;
@@ -40,8 +40,12 @@ else
     header('location:../login.php?msg=please_login');
 }
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Profile - <?php echo $row['name']; ?></title>
     <script type="text/javascript">
         function advsearch() {
@@ -73,8 +77,8 @@ else
 <body>
 
 <div id="nav">
-    <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+    <nav class="navbar">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
@@ -111,30 +115,58 @@ else
         </div><!-- /.navbar-collapse -->
     </nav>
 </div><!-- /.container-fluid -->
+
 <!------------------------------------------------------------------------------- -->
 <div class="container-fluid" id="content">
 
-    <aside class="col-sm-3" role="complementary">
-        <div class="region region-sidebar-first well" id="sidebar">
-           <h3 style="color: #009999" class="text-center" > Welcome <?php echo $row['name']; ?> </h3>
-        </div>
+<aside class="col-sm-3" role="complementary">
+    <div class="region region-sidebar-first well" id="sidebar">
+     <h3 style="color: #009999" class="text-center" > Welcome <?php echo $row['name']; ?> </h3>
+     </div>
 
-        <!-- profile pic -->
-        <div class="thumbnail text-center">
-            <div class="img thumbnail">
-                <?php if($row['photo']!="") {
-                    echo "<img src = '../uploads/images/".$row['photo']."' class='img-circle' >";
-                }else echo" <img src='../images/paris.jpg'>";
-                ?>
+  <!-- profile pic -->
+    <div class="thumbnail text-center">
+        <div class="img thumbnail">
+           <?php if($row['photo']!="") {
+              echo "<img src = '../uploads/images/".$row['photo']."' class='img-circle' >";
+             }else echo" <img src='../images/user_fallback.png'>";
+           ?>
         </div>
-            <strong><?php echo $row['name']; ?> </strong>
-            <!-- Button trigger modal -->
-          <p> <a href="chane_image.php"><button type="button" class="btn btn-default" >Change Image </button></a>
-        <!-- profile pic --->
+         <strong><?php echo $row['name']; ?> </strong>
+          <!-- Button trigger modal -->
+          <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#changeimg">Change Image </button></a>
+<!--------------------------- profile pic --------------------------------------- -->
+<div class="modal fade" id="changeimg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Change or upload your profile image</h4>
+      </div>
+      <div class="modal-body">
+       <form method="post" action="../upload.php?type=image" enctype="multipart/form-data">
+            <div class="form-group form-inline">
+                <label for="file" class="control-label">Select your photo:</label>
+                <input type=file name="file" id="file" class="form-control">
+            </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" id="submit" name="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- profile pic -->
+
 </aside>
+
     <!------------------------------------------------------------------------------- -->
 <section class="col-sm-7">
-    <div id="searchcontent">
+<div id="searchcontent">
+<!-- Search content overlay div starts here ------------------------------------ --- -->
 <div id="header">
 <h3> Find jobs, edit your profile or update your current resume for better jobs!</h3>
 </div>
@@ -146,12 +178,16 @@ else
     <li><a data-toggle="tab" href="#advsearch">Advanced Search</a></li>
 </ul>
 
-<div class="tab-content">
-    <!------------------------------------------------------------------------------- -->
-    <div id="details" class="tab-pane fade in active" style="margin-top: 50px;">
+<!------------------------------------------------------------------------------- -->
+
+    <div class="tab-content">
+
+<!------------------------------------------------------------------------------- -->
+
+        <div id="details" class="tab-pane fade in active" style="margin-top: 50px;">
         <h3> Your Profile</h3>
-    <table class="table" >
-        <tr >
+        <table class="table" >
+        <tr>
             <td class="tbold">Full Name:</td>
             <td><?php echo $row['name']; ?></td>
 
@@ -194,21 +230,27 @@ else
         $pg=$row['master_edu'];
         $q=mysqli_query($db1,"select * from jobs where ugqual='$ug' OR pgqual = '$pg'");
         if(mysqli_num_rows($q)>0) {
-            echo "<h3>These jobs are reccomended to you based on your profile:</h3>
-        <table style='margin-top: 20px; background: transparent;' class='table table-sriped'>";
+            echo "<h3>These jobs are reccomended to you based on your profile:</h3>";
+         /* <table style='margin-top: 20px; background: transparent;' class='table table-sriped'>";
             echo " <th> Company</th> <th>Job Title</th> <th>Job Description</th>  <th>Date of Posting</th> <th colspan='3''>Actions</th>";
-
+  */
             while ($result2 = mysqli_fetch_array($q)) {
                 $query2 = mysqli_query($db1, "select * from employer where eid = '$result2[eid]'");
                 $r2 = mysqli_fetch_array($query2);
 
-                echo " <tr> ";
+               /* echo " <tr> ";
                 echo "<td>" . $r2['ename'] . "</td>";
                 echo "<td>" . $result2['title'] . "</td>";
                 echo "<td>" . substr($result2['jobdesc'],0,120) . " ......</td>";
                 echo "<td width='20px'>" . $result2['postdate'] . "</td>";
                 echo "<td> <a style='color: whitesmoke;'  href='view_jobs.php?jid=" . $result2['jobid'] . "'> <button type='button' class='btn btn-success'>View Job</button></a>  </td>";
                 echo "</tr>";
+                */
+               echo "<h3> <a style='color: green;'  href='view_jobs.php?jid=" . $result2['jobid'] . "'>".$result2['title']."</a></h3>"; 
+               echo "<h4> Employer: <a href='view_emp.php?id=".$r2['eid']."'>".$r2['ename']."</a></h4>";
+               echo "<p>". substr($result2['jobdesc'],0,120) ." .......</p>";
+               echo "<h4>Job Posted on: " . $result2['postdate'] ."</h4>";
+               echo "<hr>";
             }
         }
         else{
@@ -217,10 +259,12 @@ else
         ?>
         </table>
     </div>
-    <!------------------------------------------------------------------------------- -->
+
+<!--------------------------------- Resume ---------------------------------------------- -->
+
     <div id="resume" class="tab-pane fade">
         <div>
-    <form action="../upload.php" enctype="multipart/form-data" method="post">
+    <form action="../upload.php?type=file" enctype="multipart/form-data" method="post">
        <?php if($row['Resume']==""){
     echo "<div class='alert alert-danger alert-dismissible' role='alert'>
             <button type='button' class='close'  data-dismiss='alert' aria-label='Close'><span
@@ -256,45 +300,42 @@ else
            <form role="form">
               <table>
                   <tr >
-                      <td class="tbold">Company Name:</td>
-                      <td><input type="text" class="form-control" id="company" name="company" required placeholder="Company Name:"> </td>
+                    <td class="tbold">Company Name:</td>
+                    <td><input type="text" class="form-control" id="company" name="company" required placeholder="Company Name:"> </td>
                   </tr>
                   <tr>
                     <td class="tbold">Location:</td>
-                      <td>
-                         <input type="text" class="form-control" id="location" name="location" placeholder="Your Prefered Location">
-                      </td>
+                    <td>
+                      <input type="text" class="form-control" id="location" name="location" placeholder="Your Prefered Location">
+                    </td>
                   </tr>
                   <tr>
-                      <td class="tbold">Job Title:</td>
-                     <td><input type="text" class="form-control" id="desig" name="desig" required placeholder="Job Title/ Designation"></td>
+                    <td class="tbold">Job Title:</td>
+                    <td><input type="text" class="form-control" id="desig" name="desig" required placeholder="Job Title/ Designation"></td>
                   </tr>
                   <tr>
                     <td class="tbold">Skills:</td>
-                     <td><input type="text" class="form-control" id="skills" name="skills" required placeholder="Key Skills"></td>
+                    <td><input type="text" class="form-control" id="skills" name="skills" required placeholder="Key Skills"></td>
                   </tr>
-
                   <tr>
-                      <td class="tbold">Industy type:</td>
-                      <td><input type = "text" class="form-control" id="industry" name="industry" placeholder="Industry Type"></td>
-
-                  </tr>
+                    <td class="tbold">Industy type:</td>
+                    <td><input type = "text" class="form-control" id="industry" name="industry" placeholder="Industry Type"></td>  </tr>
                   <tr>
                       <td></td>
                       <td><button type="button" onclick="advsearch()" class="btn btn-success"><span class="glyphicon glyphicon-search"></span> Search Jobs</button></td>
                   </tr>
               </table>
-
            </form>
        </div>
         <hr>
         <div id="subcontent">
-
+        <!---- sub content shows advanced search results --------- -->
         </div>
     </div>
-    <!------------------------------------------------------------------------------- -->
+<!------------------------------------------------------------------------------- -->
 </div> <!-- tab contents -->
-    </div><!-- closing searchcontent -->
+
+</div><!-- closing searchcontent -->
 </section> <!-- section 2 ends here -->
 
 </div> <!-- main content div -->

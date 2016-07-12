@@ -21,7 +21,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  */
-include_once('config.php');
+include_once('../config.php');
 include_once('notify.php');
 //session_start();
 notify();
@@ -48,15 +48,19 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
     <?php
 }
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome <?php echo $row['ename']; ?></title>
 </head>
 <body>
 
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse navbar" id="insidenav">
+        <div class="navbar" id="insidenav">
 
             <ul class="nav navbar-nav">
                 <div class="navbar-header">
@@ -109,15 +113,41 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
             }else echo" <img src='../images/paris.jpg'>";
             ?>
             <strong><?php echo $row['ename']; ?></strong><br>
-            <p><a class="btn btn-default" href="change_logo.php">Change Company Logo</a> 
+            <p><button class="btn btn-default" data-toggle="modal" data-target="#changelogo">Change Company Logo
         </div>
+<!------------- logo ------------------------------------- -->
+   <div class="modal fade" id="changelogo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Change or Upload your Company Logo</h4>
+      </div>
+      <div class="modal-body">
+       <form method="post" action="../upload.php?type=logo" enctype="multipart/form-data">
+            <div class="form-group form-inline">
+                <label for="file" class="control-label">Select your Logo:</label>
+                <input type=file name="file" id="file" class="form-control">
+            </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" id="submit" name="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ----------- change logo ends here ------------------------------------------------- -->
     </aside>
     <section class="col-sm-9">
     <div id="header">
-        <h3> Post a job to get the best employee for your organization</h3>
+        <h3> Post jobs and find the right candidates!</h3>
     </div>
 <div class="container">
-    <h3>Your Profile:</h3> <h4>This is visible to job seekers</h4>
+    <h3>Company Profile:</h3> <h4>The following informations are visible to job seekers.
+        We reccomend you to always update these informations.</h4>
     <hr>
     <table class="table">
         <tr>

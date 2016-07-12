@@ -23,16 +23,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 session_start();
 $jsid=$_SESSION['jsid'];
-include_once('config.php');
+include_once('../config.php');
 $q1=mysqli_query($db1,"select * from application WHERE user_id=$jsid");
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>View Applied Jobs</title>
 </head>
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
@@ -73,23 +77,27 @@ $q1=mysqli_query($db1,"select * from application WHERE user_id=$jsid");
 </div><!-- /.container-fluid -->
 
 <body>
-<div class="container-fluid">
+<div class="container">
     <h3 class="text-center" style="margin-top: 50px; color: #265a88">You Applied for these jobs</h3>
+    <div class='page-header' style='background:skyblue'></div>
      <?php if(mysqli_num_rows($q1)>0) { ?>
-<table class="table table-responsive" style="margin-top: 30px;">
-        <th>Employer</th>
+ <!-- <table class="table table-responsive" style="margin-top: 30px;">
+        <th style="width:150px">Employer</th>
         <th>Job Title</th>
         <th>Job Description</th>
         <th>Date of Posting</th>
         <th>Date on Applied</th>
-        <th colspan="3">Actions</th>
+        <th colspan="3">Actions</th> -->
         <?php
         while($row=mysqli_fetch_array($q1)) {
+			$i=1;
             $job_id=$row['job_id'];
             $q2=mysqli_query($db1,"select * from jobs where jobid = $job_id");
             while ( $result = mysqli_fetch_array($q2) ) {
+				
                 $comp=mysqli_query($db1,"select * from employer WHERE eid = $result[eid]");
                 $rowcomp=mysqli_fetch_array($comp);
+                /*
                 echo " <tr> ";
                 echo "<td> <a href='view_emp.php?id=".$rowcomp['eid']."'>".$rowcomp['ename']."</a>";
                 echo "<td>" . $result['title'] . "</td>";
@@ -98,7 +106,17 @@ $q1=mysqli_query($db1,"select * from application WHERE user_id=$jsid");
                 echo "<td>" . $row['date_applied']."</td>";
                 echo "<td>  <a style='color: whitesmoke;'  href='view_jobs.php?jid=" . $result['jobid'] . "'><button type='button' class='btn btn-success'>View Job</button> </a></td>";
                 echo "</tr>";
+                */
+               
+               echo "<h3>[".$_GLOBALS[$i]."]  <a style='color: green;'  href='view_jobs.php?jid=" . $result['jobid'] . "'>".$result['title']."</a></h3>"; 
+               echo "<h4> Employer: <a href='view_emp.php?id=".$rowcomp['eid']."'>".$rowcomp['ename']."</a></h4>";
+               echo "<p>". substr($result['jobdesc'],0,120) ." .......</p>";
+               echo "<h4>Job Posted on: " . $result['postdate'] ."</h4>";
+               echo "<h4> Applied on: " . $row['date_applied']."</h4>";
+                
             }
+            echo "<hr style='background:blue;'>";
+           $i=$i+1;
         }
         ?>
 </table>

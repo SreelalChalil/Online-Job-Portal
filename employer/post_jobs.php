@@ -17,14 +17,18 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  */
-include_once('config.php');
+include_once('../config.php');
 session_start();
 if(!isset($_SESSION['eid'])){
     header('location:../login.php?msg=please_login');
 }
 ?>
+<!DOCTYPE HTML>
 <html>
     <head> 
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Post Jobs </title>
          <script>
              function checkForm() {
@@ -53,7 +57,7 @@ alert("Fill in with correct information");
 
     <div id="nav">
         <nav>
-            <div class="collapse navbar-collapse" id="insidenav">
+            <div class="navbar" id="insidenav">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Job Portal</a>
                 </div>
@@ -301,10 +305,10 @@ alert("Fill in with correct information");
         </form>
            </div>
     </body>
-    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
-    <link href="../css/main.css" rel="stylesheet">
-    <link href="../css/employer.css" rel="stylesheet">
-    <script type="text/javascript" src="../js/validate.js"></script>
+ <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+ <link href="../css/main.css" rel="stylesheet">
+ <link href="../css/employer.css" rel="stylesheet">
+ <script type="text/javascript" src="../js/validate.js"></script>
  <script src="../js/jquery-1.12.0.min.js"></script>
  <script src="../js/bootstrap.min.js"></script>
  <script src="../location/location.js"></script>

@@ -27,8 +27,12 @@ $q3=mysqli_query($db1,"select * from jobs where jobid = $_GET[jobid]");
 $q3row=mysqli_fetch_array($q3);
 $emp_id=$_SESSION['eid'];
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Manage Jobs</title>
     <script type="text/javascript">
         function selectJs(user,job,emp) {
@@ -75,7 +79,7 @@ $emp_id=$_SESSION['eid'];
 
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
@@ -139,7 +143,7 @@ $emp_id=$_SESSION['eid'];
                     $qsel=mysqli_query($db1,"select * from selection where job_id=$_GET[jobid] and user_id= $result[user_id]");
                     $ressel=mysqli_fetch_array($qsel);
                     echo " <tr> ";
-                    echo  "<td>".$i."</td>";
+                    echo "<td>".$i."</td>";
                     echo "<td> <a href='view_js.php?jsid=" . $result['user_id'] . "'>".$result['name']."</a></td>";
                     echo "<td> <b>Basic Education: </b> " . $result['basic_edu'].",  <b>Master Education: </b> ".$result['master_edu']."</td>";
                     echo "<td>" . $result['skills'] . "</td>";
@@ -148,7 +152,7 @@ $emp_id=$_SESSION['eid'];
                         echo "<td> <button type='button' class='btn btn-success' onclick='selectJs(" . $user_id . "," . $_GET['jobid'] . "," . $emp_id . ");'>Select Candidate</button> </td>";
                         echo "<td> <button type='button' class='btn btn-danger' onclick='rejectJs(" . $user_id . "," . $_GET['jobid'] . "," . $emp_id . ");'>Reject Candidate</button> </td>";
                     }
-                    else{
+                    else {
                         $qrej=mysqli_query($db1,"select * from application where job_id=$_GET[jobid] and user_id= $result[user_id] ");
                         $rowrej=mysqli_fetch_array($qrej);
                         if($rowrej['status']==2)
@@ -170,7 +174,7 @@ $emp_id=$_SESSION['eid'];
     }
     ?>
 </div>
-<!-- --------------------------------------------------------- contents end ----------------------------------------------------------------------->
+<!-- --------------------------------------------------------- contents end --------------------------------------------------------------------- -->
 </body>
 <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
 <link href="../css/main.css" rel="stylesheet">
