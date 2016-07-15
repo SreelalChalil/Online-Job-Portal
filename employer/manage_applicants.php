@@ -126,6 +126,7 @@ $emp_id=$_SESSION['eid'];
     <h4 class="text-center">You can view their profile, select or reject them.</h4>
     <div class="page-header" style="background: steelblue"></div>
     <?php if(mysqli_num_rows($q1)>0) { ?>
+		<div class="table-responsive">
         <table class="table table-responsive" style="margin-top: 30px;">
             <th>SI NO:</th>
             <th>Full Name:</th>
@@ -166,6 +167,7 @@ $emp_id=$_SESSION['eid'];
             }
             ?>
         </table>
+        </div>
     <?php } else {  echo " <div class='container'> <div class='alert alert-warning alert-dismissible' role='alert'>
             <button type='button' class='close'  data-dismiss='alert' aria-label='Close'><span
                     aria-hidden='true'>&times;</span></button>
