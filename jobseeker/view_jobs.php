@@ -61,7 +61,7 @@ $result=mysqli_fetch_array($query);
 <body>
 
 <div id="nav">
-    <nav>
+    <nav class="navbar-fixed-top">
         <div class="collapse navbar-collapse" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>

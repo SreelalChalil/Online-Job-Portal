@@ -40,8 +40,12 @@ else
     header('location:../login.php?msg=please_login');
 }
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+<meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Profile - <?php echo $row['name']; ?></title>
     <script type="text/javascript">
         function advsearch() {
@@ -73,8 +77,8 @@ else
 <body>
 
 <div id="nav">
-    <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+    <nav class="navbar">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
