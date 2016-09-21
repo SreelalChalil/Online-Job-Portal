@@ -1,13 +1,11 @@
 # Online Job Portal Project
-Online Job Portal project is web application built using PHP, MySQL as backend and HTML JavaScript &amp; Bootstrap as Frontend. 
+Online Job Portal project is web application built using PHP, MySQL as backend and HTML JavaScript &amp; Bootstrap as Frontend. This software is developed as an academic project 
 
 <h3> Demo </h3>
 http://sreelal.comli.com/job_portal/
 
 <h3>Author:</h3> 
 Sreelal C
-
-This software is developed as an academic project
 
 <h2> License </h2>
 Online-Job-Portal - A web application built on PHP HTML & javascript</br>
