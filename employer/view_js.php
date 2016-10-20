@@ -26,9 +26,15 @@ include_once('../config.php');
 $q = mysqli_query($db1,"select * from login join jobseeker on login.log_id=jobseeker.log_id WHERE jobseeker.user_id = $_GET[jsid]");
 $row=mysqli_fetch_array($q);
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>view Jobseeker</title>
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+    <link href="../css/main.css" rel="stylesheet">
     <style type="text/css">
         #insidenav{
             background: #dd4814;
@@ -66,25 +72,27 @@ $row=mysqli_fetch_array($q);
             background: white;
             color: black;
         }
-        .thumbnail {
-            width: auto;
-            height: auto;
-            border: none;
-            border-radius: 0;
-            background: transparent;
+        
+ .thumbnail {
+    width: 100;
+    height: 100;
+   background: transparent;
+   border:none;
 
+}
 
-        }
-        .thumbnail img {
-            width: 300px;
-            height: 300px;
-            margin-bottom: 5px;
-        }
+.thumbnail img-circle {
+    display: block;
+    width: 100;
+    height: 100;
+    border:none;
+    
+}
     </style>
 </head>
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
@@ -134,15 +142,15 @@ $row=mysqli_fetch_array($q);
         </div>
 
         <!-- profile pic -->
-        <div class="thumbnail text-center">
-            <div class="img thumbnail">
-                <?php if($row['photo']!="") {
-                    echo "<img src = '../uploads/images/".$row['photo']."' class='img-rounded' >";
-                }else echo" <img src='../images/user_fallback.png'>";
-                ?>
-            </div>
-            <strong><?php echo $row['name']; ?> </strong>
-            <!-- Button trigger modal -->
+   
+    <div class="thumbnail text-center">
+        <div class="img thumbnail">
+           <?php if($row['photo']!="") {
+              echo "<img src = '../uploads/images/".$row['photo']."' class='img-circle' >";
+             }else echo" <img src='../images/user_fallback.png'>";
+           ?>
+        </div>
+         <strong><?php echo $row['name']; ?> </strong>
 
             <p> <?php if($row['Resume']!="") {
                     echo "<button type='button' class='btn bg-primary' ><a href = '../uploads/resume/".$row['Resume']."' style='color:white;' >
@@ -196,7 +204,6 @@ $row=mysqli_fetch_array($q);
 
 </body>
 <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
-<link href="../css/main.css" rel="stylesheet">
 <script src="../js/jquery-1.12.0.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 </html>

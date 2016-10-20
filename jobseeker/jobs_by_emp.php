@@ -25,8 +25,12 @@ session_start();
 include_once('../config.php');
 $query=mysqli_query($db1,"select * from jobs where eid = $_GET[eid]");
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>View All Jobs</title>
     <script>
         function goBack() {
@@ -36,7 +40,7 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_GET[eid]");
 </head>
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
@@ -82,7 +86,7 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_GET[eid]");
     <br>
     <h3>All Jobs of <?php echo $_GET['ename']; ?></h3><br>
     <button class="btn btn-warning" onclick="goBack()"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back</button>
-
+	<div class="table-responsive">
     <table class="table table-responsive" style="margin-top: 30px;">
         <th>Job Title</th>
         <th>Job Description</th>
@@ -99,6 +103,7 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_GET[eid]");
         }
         ?>
     </table>
+    </div>
 </div>
 </body>
 <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">

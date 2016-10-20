@@ -24,8 +24,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 session_start();
 include_once('../config.php');
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selected Jobs</title>
     <script type="text/javascript">
         function rejectjob(jobid) {
             // alert(keyword);
@@ -53,7 +58,7 @@ include_once('../config.php');
 </head>
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>

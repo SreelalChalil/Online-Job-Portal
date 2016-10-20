@@ -43,9 +43,15 @@ else
 <!DOCTYPE HTML>
 <html>
 <head>
+
 <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Profile - <?php echo $row['name']; ?></title>
     <script type="text/javascript">
         function advsearch() {
@@ -115,6 +121,7 @@ else
         </div><!-- /.navbar-collapse -->
     </nav>
 </div><!-- /.container-fluid -->
+
 <!------------------------------------------------------------------------------- -->
 <div class="container-fluid" id="content">
 
@@ -229,21 +236,27 @@ else
         $pg=$row['master_edu'];
         $q=mysqli_query($db1,"select * from jobs where ugqual='$ug' OR pgqual = '$pg'");
         if(mysqli_num_rows($q)>0) {
-            echo "<h3>These jobs are reccomended to you based on your profile:</h3>
-        <table style='margin-top: 20px; background: transparent;' class='table table-sriped'>";
+            echo "<h3>These jobs are reccomended to you based on your profile:</h3>";
+         /* <table style='margin-top: 20px; background: transparent;' class='table table-sriped'>";
             echo " <th> Company</th> <th>Job Title</th> <th>Job Description</th>  <th>Date of Posting</th> <th colspan='3''>Actions</th>";
-
+  */
             while ($result2 = mysqli_fetch_array($q)) {
                 $query2 = mysqli_query($db1, "select * from employer where eid = '$result2[eid]'");
                 $r2 = mysqli_fetch_array($query2);
 
-                echo " <tr> ";
+               /* echo " <tr> ";
                 echo "<td>" . $r2['ename'] . "</td>";
                 echo "<td>" . $result2['title'] . "</td>";
                 echo "<td>" . substr($result2['jobdesc'],0,120) . " ......</td>";
                 echo "<td width='20px'>" . $result2['postdate'] . "</td>";
                 echo "<td> <a style='color: whitesmoke;'  href='view_jobs.php?jid=" . $result2['jobid'] . "'> <button type='button' class='btn btn-success'>View Job</button></a>  </td>";
                 echo "</tr>";
+                */
+               echo "<h3> <a style='color: green;'  href='view_jobs.php?jid=" . $result2['jobid'] . "'>".$result2['title']."</a></h3>"; 
+               echo "<h4> Employer: <a href='view_emp.php?id=".$r2['eid']."'>".$r2['ename']."</a></h4>";
+               echo "<p>". substr($result2['jobdesc'],0,120) ." .......</p>";
+               echo "<h4>Job Posted on: " . $result2['postdate'] ."</h4>";
+               echo "<hr>";
             }
         }
         else{

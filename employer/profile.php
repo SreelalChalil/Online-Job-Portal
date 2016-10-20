@@ -48,15 +48,19 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
     <?php
 }
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome <?php echo $row['ename']; ?></title>
 </head>
 <body>
 
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse navbar" id="insidenav">
+        <div class="navbar" id="insidenav">
 
             <ul class="nav navbar-nav">
                 <div class="navbar-header">
@@ -117,7 +121,7 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Change or upload your profile image</h4>
+        <h4 class="modal-title" id="myModalLabel">Change or Upload your Company Logo</h4>
       </div>
       <div class="modal-body">
        <form method="post" action="../upload.php?type=logo" enctype="multipart/form-data">

@@ -47,6 +47,7 @@ else {
 ?>
 
 <html>
+<div class="table-responsive">
 <table class="table table-striped">
     <th>Company</th>
     <th>Position</th>
@@ -70,4 +71,5 @@ else {
 
     }     ?>
 </table>
+ </div>
 </html>

@@ -23,8 +23,12 @@ if(!isset($_SESSION['eid'])){
     header('location:../login.php?msg=please_login');
 }
 ?>
+<!DOCTYPE HTML>
 <html>
     <head> 
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Post Jobs </title>
          <script>
              function checkForm() {
@@ -53,7 +57,7 @@ alert("Fill in with correct information");
 
     <div id="nav">
         <nav>
-            <div class="collapse navbar-collapse" id="insidenav">
+            <div class="navbar" id="insidenav">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Job Portal</a>
                 </div>

@@ -27,8 +27,12 @@ $q3=mysqli_query($db1,"select * from jobs where jobid = $_GET[jobid]");
 $q3row=mysqli_fetch_array($q3);
 $emp_id=$_SESSION['eid'];
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Manage Jobs</title>
     <script type="text/javascript">
         function selectJs(user,job,emp) {
@@ -75,7 +79,7 @@ $emp_id=$_SESSION['eid'];
 
 <div id="nav">
     <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
@@ -122,6 +126,7 @@ $emp_id=$_SESSION['eid'];
     <h4 class="text-center">You can view their profile, select or reject them.</h4>
     <div class="page-header" style="background: steelblue"></div>
     <?php if(mysqli_num_rows($q1)>0) { ?>
+		<div class="table-responsive">
         <table class="table table-responsive" style="margin-top: 30px;">
             <th>SI NO:</th>
             <th>Full Name:</th>
@@ -162,6 +167,7 @@ $emp_id=$_SESSION['eid'];
             }
             ?>
         </table>
+        </div>
     <?php } else {  echo " <div class='container'> <div class='alert alert-warning alert-dismissible' role='alert'>
             <button type='button' class='close'  data-dismiss='alert' aria-label='Close'><span
                     aria-hidden='true'>&times;</span></button>
@@ -170,7 +176,7 @@ $emp_id=$_SESSION['eid'];
     }
     ?>
 </div>
-<!-- --------------------------------------------------------- contents end ----------------------------------------------------------------------->
+<!-- --------------------------------------------------------- contents end --------------------------------------------------------------------- -->
 </body>
 <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
 <link href="../css/main.css" rel="stylesheet">

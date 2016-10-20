@@ -28,14 +28,18 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_SESSION[eid]");
 //echo $result['title'];
 
 ?>
+<!DOCTYPE HTML>
 <html>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <META HTTP-EQUIV="refresh" CONTENT="60">
 <head>
     <title>Manage  Jobs</title>
 </head>
 <div id="nav">
-    <nav>
-        <div class="collapse navbar-collapse" id="insidenav">
+    <nav class="emp-nav">
+        <div class="navbar" id="insidenav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Job Portal</a>
             </div>
@@ -80,7 +84,8 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_SESSION[eid]");
 <div class="page-header" style="background: #f4511e"></div>
 <?php if(mysqli_num_rows($query)>0) { ?>
 <div class="container" id="viewmain">
-    <table class="table table-responsive">
+	<div class="table-responsive">
+    <table class="table table-responsive table-striped">
         <th>Job Title</th>
         <th>Job Description</th>
         <th>Date of Posting</th>
@@ -101,6 +106,7 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_SESSION[eid]");
     }
 ?>
     </table>
+    </div>
 </div>
 <?php } else  echo " <div class='container'> <div class='alert alert-warning alert-dismissible' role='alert'>
             <button type='button' class='close'  data-dismiss='alert' aria-label='Close'><span
