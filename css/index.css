@@ -41,3 +41,6 @@ div.bmsTop ul li{
     display: inline;
     overflow: hidden;
 }
+body{
+    background: url("paper.png");
+}

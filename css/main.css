@@ -3,7 +3,13 @@
      padding: 12px;
  }    
 body{
-    background: white;
+    background:url("paper2.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Ubuntu ;
     font-weight: normal;
     font-size: 18px;
